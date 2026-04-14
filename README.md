@@ -1,13 +1,3 @@
----
-title: Sentiment Analysis AI
-emoji: 🎭
-colorFrom: green
-colorTo: blue
-sdk: streamlit
-app_file: app.py
-pinned: false
----
-
 # 🎭 Sentiment Analysis AI
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/ashish3120/Sentiment-Analysis)
