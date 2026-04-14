@@ -63,12 +63,22 @@ def main():
     
     # Initialize analyzer
     analyzer = SentimentAnalyzer()
-    
+
+    # Initialize session state for input_area if it doesn't exist
+    if 'input_area' not in st.session_state:
+        st.session_state.input_area = ""
+
     # Input section
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        user_input = st.text_area("Enter your text below:", height=200, placeholder="Type something emotional here...")
+        # Text area bound to session state via the 'key' parameter
+        user_input = st.text_area(
+            "Enter your text below:", 
+            height=200, 
+            placeholder="Type something emotional here...",
+            key="input_area"
+        )
         
         if st.button("Analyze Sentiment"):
             if user_input.strip() == "":
@@ -109,9 +119,18 @@ def main():
             "I'm feeling a bit overwhelmed and scared about the upcoming changes.",
             "I am surprised to see how much progress we have made in such a short time."
         ]
-        selected_example = st.selectbox("Choose an example to test:", ["None"] + examples)
-        if selected_example != "None":
-            st.info(f"Selected: {selected_example}")
+        
+        # Callback to update the text area's key directly
+        def on_example_change():
+            if st.session_state.example_selection != "None":
+                st.session_state.input_area = st.session_state.example_selection
+
+        st.selectbox(
+            "Choose an example to test:", 
+            ["None"] + examples,
+            key="example_selection",
+            on_change=on_example_change
+        )
             # Highlight this as something they can copy-paste
 
     # Footer
