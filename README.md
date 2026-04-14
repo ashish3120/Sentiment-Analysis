@@ -10,13 +10,18 @@ pinned: false
 
 # 🎭 Sentiment Analysis AI
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/ashish3120/Sentiment-Analysis)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## 🌐 Live Demo
+Experience the app live on Hugging Face Spaces:
+**[Sentiment Analysis AI](https://huggingface.co/spaces/ashish3120/Sentiment-Analysis)**
 
 A production-grade NLP application that identifies six core human emotions with high precision. Built with **Streamlit** and **Scikit-Learn**, this tool provides a sleek interface for real-time emotional intelligence.
 
 ---
+
 
 ## ✨ Key Features
 - **🚀 Real-time Inference**: Instance sentiment detection as you type.
